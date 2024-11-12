@@ -502,6 +502,9 @@ public class FileManagerCommandsProcessor : IFileManagerCommandsProcessor
 
     private string Zip(string id, ZipCommandParameters commandParameters)
     {
+#warning: error while compressing folders !
+        //error while compressing folders !
+
         var storageSizeLimit = FileManagerComponent.ConfigStorage[id].StorageMaxSizeMByte;
         var rootFolderSize = GetRootFolderSize(id);
         if (storageSizeLimit > 0 && storageSizeLimit < rootFolderSize)
